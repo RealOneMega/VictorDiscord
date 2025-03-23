@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktor Discord Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        .feature-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://cdn.discordapp.com/avatars/1234567890/1234567890.png" alt="Viktor Logo" class="h-8 w-8 rounded-full">
+                    <span class="ml-2 text-xl font-bold">Viktor</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#features" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1234567890&permissions=8&scope=bot%20applications.commands" 
+                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Add to Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <img src="https://cdn.discordapp.com/avatars/1234567890/1234567890.png" alt="Viktor Logo" class="mx-auto h-32 w-32 rounded-full mb-8">
+                <h1 class="text-4xl font-bold mb-4">Welcome to Viktor</h1>
+                <p class="text-xl text-gray-300 mb-8">Your advanced Discord bot for server management and more</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1234567890&permissions=8&scope=bot%20applications.commands" 
+                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md text-lg font-medium">
+                        Add to Discord
+                    </a>
+                    <a href="https://discord.gg/your-support-server" 
+                       class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md text-lg font-medium">
+                        Join Support Server
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fast & Reliable</h3>
+                    <p class="text-gray-400">Lightning-fast response times and 99.9% uptime guarantee.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Customizable</h3>
+                    <p class="text-gray-400">Tailor the bot to your server's needs with extensive configuration options.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure</h3>
+                    <p class="text-gray-400">Enterprise-grade security with regular updates and patches.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2024 Viktor Discord Bot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
