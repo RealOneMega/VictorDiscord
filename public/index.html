@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktor - Advanced Discord Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        .feature-card {
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="https://cdn.discordapp.com/app-icons/1179554024748503132/acd188825667c8b789703356e978d5d5.png?size=64" alt="Viktor" class="w-8 h-8 rounded-full">
+                    <span class="text-xl font-bold">Viktor</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="/" class="text-[#5865F2] font-semibold">Home</a>
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="/login" class="bg-[#5865F2] hover:bg-[#4752C4] text-white px-4 py-2 rounded-lg transition-colors">
+                        Add to Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center mb-8">
+                <img src="https://cdn.discordapp.com/app-icons/1179554024748503132/acd188825667c8b789703356e978d5d5.png?size=256" alt="Viktor" class="w-32 h-32 rounded-full border-4 border-[#5865F2]">
+            </div>
+            <h1 class="text-5xl font-bold mb-6">Meet Viktor</h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Your all-in-one Discord companion for server management, moderation, and community engagement.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="/login" class="hero-gradient text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                    Add to Discord
+                </a>
+                <a href="#features" class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 bg-gray-900/50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Powerful Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Advanced Permissions</h3>
+                    <p class="text-gray-400">Granular control over user permissions and server management capabilities.</p>
+                </div>
+
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Server Analytics</h3>
+                    <p class="text-gray-400">Comprehensive insights into server activity, member engagement, and growth metrics.</p>
+                </div>
+
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Security Features</h3>
+                    <p class="text-gray-400">Advanced security measures to protect your server and its members.</p>
+                </div>
+
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-400">Optimized performance ensuring quick response times and smooth operation.</p>
+                </div>
+
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Auto-Moderation</h3>
+                    <p class="text-gray-400">Intelligent moderation tools to maintain server quality and safety.</p>
+                </div>
+
+                <div class="feature-card bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Custom Commands</h3>
+                    <p class="text-gray-400">Create and manage custom commands tailored to your server's needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">About Viktor</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Viktor is a powerful Discord bot designed to enhance your server's functionality and security. 
+                    With a comprehensive suite of features, Viktor helps server administrators maintain order, 
+                    engage with their community, and create a better Discord experience for everyone.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="/login" class="bg-[#5865F2] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#4752C4] transition-colors">
+                        Add to Discord
+                    </a>
+                    <a href="https://discord.gg/your-invite" class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                        Join Support Server
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/80 backdrop-blur-sm py-8 px-4 border-t border-gray-800">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 Viktor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
