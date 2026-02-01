@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id
+  createdAt DateTime @default(now())
+  profile   UserProfile?
+  entitlements Entitlement[]
+}
+
+model Guild {
+  id        String   @id
+  createdAt DateTime @default(now())
+  config    GuildConfig?
+  entitlements Entitlement[]
+}
+
+model UserProfile {
+  id       String  @id
+  locale   String?
+  timezone String?
+  user     User    @relation(fields: [id], references: [id])
+}
+
+model GuildConfig {
+  id                String  @id
+  logChannelId      String?
+  autoModEnabled    Boolean @default(false)
+  welcomeEnabled    Boolean @default(true)
+  ticketPanelChannelId String?
+  allowOwnerBulkDm  Boolean @default(false)
+  guild             Guild   @relation(fields: [id], references: [id])
+
+  @@map("guild_settings")
+}
+
+model Entitlement {
+  id        String   @id @default(cuid())
+  scope     String
+  plan      String
+  features  Json
+  expiresAt DateTime?
+  userId    String?
+  guildId   String?
+  user      User?   @relation(fields: [userId], references: [id])
+  guild     Guild?  @relation(fields: [guildId], references: [id])
+
+  @@map("premium_entitlements")
+}
+
+model LevelStat {
+  id        String   @id @default(cuid())
+  userId    String
+  guildId   String
+  xp        Int      @default(0)
+  level     Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, guildId])
+}
+
+model MetricEvent {
+  id        String   @id @default(cuid())
+  key       String
+  value     Int
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  actorId     String
+  action      String
+  targetId    String?
+  guildId     String?
+  channelId   String?
+  payloadHash String
+  success     Boolean  @default(false)
+  reason      String?
+  createdAt   DateTime @default(now())
+
+  @@map("audit_logs")
+}
+
+model OwnerConsolePreference {
+  id        String   @id @default(cuid())
+  ownerId   String
+  theme     String?  @default("dark")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("owner_console_preferences")
+}
+
+model SavedSegment {
+  id        String   @id @default(cuid())
+  ownerId   String
+  name      String
+  filters   Json
+  createdAt DateTime @default(now())
+
+  @@map("saved_segments")
+}
+
+model UsageMetric {
+  id        String   @id @default(cuid())
+  key       String
+  value     Int
+  scope     String?
+  guildId   String?
+  createdAt DateTime @default(now())
+
+  @@map("usage_metrics")
+}
